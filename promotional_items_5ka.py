@@ -2,7 +2,7 @@ import requests
 import random
 import time
 
-sate_url = 'https://icobench.com/icos?'
+sate_url = 'https://5ka.ru/special_offers/'
 params = {'page':1}
 sate_data = requests.get(sate_url, params=params)
 while params["page"]<470:

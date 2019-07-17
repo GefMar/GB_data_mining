@@ -1,8 +1,9 @@
-import csv
+import requests
+import random
+import time
 
-text = 'Hello world'
+sate_url = 'https://icobench.com/icos?'
 params = {'page':1}
-name_file = f'data/ICO_bench{params["page"]}.csv'
-with open(f'data/ICO_bench{params["page"]}.csv', 'w', newline='') as file:
-    writer = csv.writer(file, delimiter='')
-    writer.writerow(text)
+while params["page"]<469:    
+    params["page"] += 1
+    print (params["page"]) 
