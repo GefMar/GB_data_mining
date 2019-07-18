@@ -1,6 +1,13 @@
 import requests
 import random
 import time
+import os
+
+try:
+    os.mkdir('data_ico_bench')
+except:
+    pass
+
 
 sate_url = 'https://icobench.com/icos?'
 params = {'page':1}
