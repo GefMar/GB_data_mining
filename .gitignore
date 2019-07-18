@@ -82,4 +82,6 @@ fabric.properties
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-
+.data_ico_bench
+.data_icorating
+.env
