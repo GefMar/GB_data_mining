@@ -1,2 +1,2 @@
 # GB_data_mining
-Методы сбора и обработки данных из сети Интернет
+### 5ka - Пяторочка, get_icobench.py - IcoBench
