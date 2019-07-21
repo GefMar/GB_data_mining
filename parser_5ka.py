@@ -1,25 +1,25 @@
 import requests
 from pymongo import MongoClient
-from alchemy_orm import Product as DbProduct
+from alchemy_orm import New as DbNew
 from alchemy_orm import Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.orm import session
 
-api_url = 'https://5ka.ru/api/v2/special_offers/?records_per_page=12&page=1'
+api_url = 'https://5ka.ru/api/news/'
 CLIENT = MongoClient('localhost', 27017)
-MONGO_DB = CLIENT.special5ka2
-COLLECTION = MONGO_DB.products
+MONGO_DB = CLIENT.news_5ka
+COLLECTION = MONGO_DB.news
 
-engine = create_engine('sqlite:///products.db')
+engine = create_engine('sqlite:///news.db')
 Base.metadata.create_all(engine)
 
 db_session = sessionmaker(bind=engine)
 db_session.configure(bind=engine)
 
 
-class Special5ka:
-    products = []
+class News5ka:
+    news = []
     next = None
     previous = None
 
@@ -32,17 +32,18 @@ class Special5ka:
                 data = self.get_next_data(url)
 
             for item in data.get('results'):
-                self.products.append(DbProduct(**item))
-                # self.products.append(item)
+                # self.products.append(DbProduct(**item))
+                self.news.append(item)
 
             for key, value in data.items():
                 setattr(self, key, value)
 
             if not data['next']:
                 break
-        # COLLECTION.insert_many(self.products)
+        COLLECTION.insert_many(self.news)
+
         session = db_session()
-        session.add_all(self.products)
+        session.add_all(self.news)
 
         session.commit()
         session.close()
@@ -52,11 +53,11 @@ class Special5ka:
 
 
 class Product:
-    def __init__(self, product_dict):
-        for key, value in product_dict.items():
+    def __init__(self, new_dict):
+        for key, value in new_dict.items():
             setattr(self, key, value)
 
 
 if __name__ == '__main__':
-    collection = Special5ka(api_url)
+    collection = News5ka(api_url)
     print('***')
