@@ -31,10 +31,11 @@ class icorating:
         while True:
             data = self.sate_data(url, self.params)
             dt = data.get('icos')['data']          
-                      
+            last_page =  data.get('icos')['last_page']            
             
             for i in dt:
                 self.info_data.append(DbICO(**i))
+                print (i)
                 #self.info_data.append(i)                
 #            with open (f'data_icorating/test.json','w') as file:
 #                json.dump(self.info_data, file, sort_keys=True, indent=4)
