@@ -6,7 +6,7 @@ Base = declarative_base()
 
 
 class ico_base(Base):
-    __tablename__ = 'product'
+    __tablename__ = 'ICO'
     id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
     s_id = Column(Integer, unique=True)
     startup_name = Column(String)
@@ -21,12 +21,12 @@ class ico_base(Base):
 
 
 
-    tmp = relationships('Tmp', backref='product')
+    #tmp = relationships('Tmp', backref='product')
 
     def __init__(self, **kwargs):
         self.s_id = kwargs.get('id')
         self.name = kwargs.get('name')
 
 
-class Tmp(Base):
-    pass
+#class Tmp(Base):
+#    pass
