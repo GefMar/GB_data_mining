@@ -83,3 +83,9 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+/.idea/
+/icobench/
+/icorating/
+/venv/
+*.db
+*.zip
