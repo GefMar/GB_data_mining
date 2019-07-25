@@ -1,0 +1,70 @@
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/ico
+MongoDB server version: 3.6.3
+collection: icobench
+{
+	"_id" : ObjectId("5d397bede768af0c4cc7c114"),
+	"name" : " 1KCoin",
+	"slogan" : "Private Club Of Investors",
+	"description" : "1KCoin is a private club of investors, with the goal of bringing friends together in a community that benefits from the experience of professional traders, but without the hassle of managing a diversified portfolio on different exchange platforms for crypto-coins, and also without the risks inherent in the lack of crypto-knowledge.\r\nYou can be part of a community that builds an ecosystem of projects, both in crypto and in classical businesses. Experienced traders will manage the crypto-funds, but also the 1KCoin financial ecosystem will include classical projects voted by the community, and those who get the majority of votes will be funded. Monthly earnings from all projects where community money was invested will be shared back into the community as dividends.",
+	"categories" : [
+		"Investment",
+		"Cryptocurrency",
+		"Casino & Gambling"
+	],
+	"site" : "https://www.1kcoin.io/?utm_source=icobench",
+	"socials" : [
+		{
+			"title" : "1KCoin on Twitter",
+			"href" : "https://twitter.com/1KCoin_Global"
+		},
+		{
+			"title" : "1KCoin on Facebook",
+			"href" : "https://www.facebook.com/1kcoin.io"
+		},
+		{
+			"title" : "1KCoin on BitcoinTalk",
+			"href" : "https://bitcointalk.org/index.php?topic=3159987.0"
+		},
+		{
+			"title" : "1KCoin on Telegram",
+			"href" : "https://t.me/The1KCoinOfficial"
+		},
+		{
+			"title" : "1KCoin website",
+			"href" : "https://www.1kcoin.io/?utm_source=icobench"
+		}
+	],
+	"ratings" : 2.8,
+	"about_section" : "<h2 class=\"notranslate\">About 1KCoin</h2><p>1KCoin is a cryptocurrency token based on the Equity Crowdfunding philosophy that allows coin holders, without the need of experience, the necessary time and knowledge, to have profit in the volatile market of cryptocurrencies.</p><p>Advantages: With immediate liquidity in your Wallet (your tokens are not blocked for any period of time, and also a 1KCoin Card will be issued.)</p><ul>\r\n<li>Built on the Waves platform, Completely decentralized.</li>\r\n<li>Easy-to-use Tools and Systems for our Community.</li>\r\n<li>Flexibility in the investment (projects will be voted by the Community).</li>\r\n<li>Free Educational Program in cryptocurrencies domain.</li>\r\n<li>With a real growth plan.</li>\r\n</ul><li>Built on the Waves platform, Completely decentralized.</li><li>Easy-to-use Tools and Systems for our Community.</li><li>Flexibility in the investment (projects will be voted by the Community).</li><li>Free Educational Program in cryptocurrencies domain.</li><li>With a real growth plan.</li><p><strong>1K-TEAM</strong><br>1K-Team is the investment, administration and due-diligence team for opportunities of the 1KCoin project. Administrators have extensive experience in the world of cryptocurrencies and are able to observe details in their analyses according to market conditions and existing systems, as well as in new projects in the industry.<br><strong>MINIMIZED RISK</strong><br>The investment team will use the funds raised to invest in more than 1000 different cryptocurrencies and multiple strategies:<br>• Buy and Hold<br>• Arbitration.<br>• Trading.<br>• Operational automation<br>• ICOs.<br>• Private sale.<br>• Analysis of projects.<br>This diversified portfolio would minimize the risk of investing in cryptocoins, minimizing the investment and risk involved in the high volatility of the cryptocurrencies domain.<br><strong>ECOSYSTEM</strong><br>To guarantee durability and enable the use of the 1kcoin currency that each user wants and to become a valuable means of exchange, the following strategies will be promoted:<br>• Global Marketplace<br>• Adoption of use by millions of users in the world.<br>• 1KCoin as a source of Crowdfunding (Financer).<br>• Social network of the 1KCoin community.<br>• Process of paradigm change in classical businesses.<br>• 1KCoin Exchange.<br>• Entertainment systems, online gaming platform.<br>• 1KCoin card.</p><strong>1K-TEAM</strong><br><br><strong>MINIMIZED RISK</strong><br><br><br><br><br><br><br><br><br><br><strong>ECOSYSTEM</strong><br><br><br><br><br><br><br><br><br>",
+	"team" : {
+		"team" : [
+			ObjectId("5d397bede768af0c4cc7c10a"),
+			ObjectId("5d397bede768af0c4cc7c10b"),
+			ObjectId("5d397bede768af0c4cc7c10c"),
+			ObjectId("5d397bede768af0c4cc7c10d"),
+			ObjectId("5d397bede768af0c4cc7c10e"),
+			ObjectId("5d397bede768af0c4cc7c10f"),
+			ObjectId("5d397bede768af0c4cc7c110"),
+			ObjectId("5d397bede768af0c4cc7c111")
+		],
+		"advisors" : [
+			ObjectId("5d397bede768af0c4cc7c112"),
+			ObjectId("5d397bede768af0c4cc7c113")
+		]
+	}
+}
+
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/ico
+MongoDB server version: 3.6.3
+collection: team
+{
+	"_id" : ObjectId("5d397bede768af0c4cc7c10a"),
+	"profile" : "/u/florin+achim+starchinuta",
+	"name" : "Florin Achim Starchinuta",
+	"job" : "CEO/Fund Manager",
+	"socials" : [
+		"https://www.linkedin.com/in/strachinuta-florin-a5670b93/"
+	]
+}
