@@ -87,3 +87,6 @@ pip-selfcheck.json
 /icobench/
 /icorating/
 /venv/
+*.zip
+/__pycache__/
+*.db
