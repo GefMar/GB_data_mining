@@ -70,6 +70,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 5
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'ico_parser.pipelines.IcoParserPipeline': 300,
+   'ico_parser.pipelines.PersonPipeline': 300
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
