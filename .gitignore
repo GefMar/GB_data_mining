@@ -83,3 +83,8 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+/.idea/GB_data_mining.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml
