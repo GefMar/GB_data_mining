@@ -83,3 +83,7 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+/env/
+/pages/
+/.idea/
+/icorating_startup/
