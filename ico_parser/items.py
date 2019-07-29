@@ -25,11 +25,22 @@ class IcoParserItem(scrapy.Item):
     project_url = scrapy.Field()
     about_project = scrapy.Field()
     # people = IcoParserPeople()
-    team_names = scrapy.Field()
-    team_title = scrapy.Field()
-    team_linkedin = scrapy.Field()
+    team = scrapy.Field()
+    advisors = scrapy.Field()
+    pre_ico_time_begin = scrapy.Field()
+    pre_ico_time_end = scrapy.Field()
 
 
+class PersonItem(scrapy.Item):
+    _id = scrapy.Field()
+    name = scrapy.Field()
+    links = scrapy.Field()
+    source_page_url = scrapy.Field()
 
 
-
+class RatingItem(scrapy.Item):
+    overall_rating = scrapy.Field()
+    profile_rating = scrapy.Field()
+    team_rating = scrapy.Field()
+    vision_rating = scrapy.Field()
+    product_rating = scrapy.Field()
