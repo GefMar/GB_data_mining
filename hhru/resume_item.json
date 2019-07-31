@@ -1,0 +1,19 @@
+{
+	"_id" : "5d41e005e768af3bcccaede2",
+	"profile_url" : "https://hh.ru/resume/c203f76200037d58bb0039ed1f456543684d69",
+	"skills" : [
+		"Python",
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"Adobe Photoshop",
+		"Django Framework",
+		"Git",
+		"github",
+		"Bootstrap",
+		"jQuery",
+		"Vue.js",
+		"MySQL"
+	],
+	"work" : "Февраль 2017 — по настоящее время\n2 года 6 месяцев\nФриланс\nПрограммист\n• Разработка WEB-приложений в фреймворке Django;\n• Работа с библиотеками Python: requests, BeautifulSoup, scrapy, PyMySQL, os, re и т.д;\n• Язык программирования Python 3;\n• Составление алгоритмов;\n• Работа с БД (SQL, ORM). Join (SQL);\n• Фронтенд: Bootstrap, jQuery, Vue.js, HTML, CSS, JS;\n• Adobe Photoshop CC."
+}
