@@ -1,0 +1,123 @@
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/ico
+MongoDB server version: 3.6.3
+{
+	"_id" : ObjectId("5d3edb1ae768af41f495b833"),
+	"name" : " HYGH",
+	"slogan" : "The Future Of Digital Advertising",
+	"description" : "HYGH is a peer-to-peer advertising network and content management system that connects owners of public displays with brands. The HYGH platform empowers everyone to become an advertiser, regardless of budget or company size. Any business can power up a screen and earn passive income running advertisements in their shop, hotel or restaurant.\r\n\r\nMost Digital Out of Home Advertising (DOOH) is expensive and inflexible. Most spaces require a high minimum screen buy-in and must be booked far in advance, limiting spontaneous ads. Screen ownership is largely unclear, with a lack of clarity in how to book a campaign. HYGH aims to bring affordability and order to the market.\r\n\r\nDOOH advertising is growing exponentially. OOH media revenues worldwide increased by 13% in 2018. HYGH offers the opportunity for investors to get in on the action - by investing $500 minimum in the HYGH platform, all investors receive a 9% revenue share in ad revenue.",
+	"categories" : [
+		"Internet",
+		"Infrastructure",
+		"Business services",
+		"Big Data",
+		"Media",
+		"Other",
+		"Platform",
+		"Software"
+	],
+	"site" : "https://hygh.tech/?utm_source=icobench",
+	"socials" : [
+		{
+			"title" : "HYGH on Twitter",
+			"href" : "https://twitter.com/hyghag"
+		},
+		{
+			"title" : "HYGH on Facebook",
+			"href" : "https://www.facebook.com/hyghag/"
+		},
+		{
+			"title" : "HYGH on Reddit",
+			"href" : "https://reddit.com/r/HYGH/"
+		},
+		{
+			"title" : "HYGH on BitcoinTalk",
+			"href" : "https://bitcointalk.org/index.php?topic=5104586"
+		},
+		{
+			"title" : "HYGH on Medium",
+			"href" : "https://medium.com/hygh-tech"
+		},
+		{
+			"title" : "HYGH on Telegram",
+			"href" : "https://t.me/hyghag"
+		},
+		{
+			"title" : "HYGH website",
+			"href" : "https://hygh.tech/?utm_source=icobench"
+		},
+		{
+			"title" : "HYGH on BitcoinWiki",
+			"href" : "https://en.bitcoinwiki.org/wiki/HYGH"
+		}
+	],
+	"ratings" : {
+		"profile" : "4.5",
+		"team" : "4.4",
+		"vision" : "4.5",
+		"product" : "4.2"
+	},
+	"about_section" : "<h2 class=\"notranslate\">About HYGH</h2><p>HYGH is an international team who are working to disrupt the digital out of home (DOOH) advertising market. We believe all businesses should have the opportunity to become an advertiser, regardless of budget, resources or company size.</p><p>Our mission<br>HYGH’s mission is to redefine how we as a society handle advertisements in our cities. Who should provide the infrastructure? Who should be advertising? We are creating an easy to use standard that enables:</p><br><p>Revenue Generation outside conventional locations:<br>Advertising sites are not limited to conventionally placed screens. Any business can power up a screen and earn passive income by running advertisements in their hotel, shop or restaurant.<br><br>Real Time:<br>Campaigns can be changed in real time to react to current events as they unfold such as weather variations, public events, or changes in traffic flow.<br><br>Hyperlocal:<br>Campaigns can address local issues where people live and work and encourage consumers to use their purchasing power at local small businesses.</p><br><br><br><br><br><br><br><p><br>Time specific:<br>Campaigns can be funded to run across an extended period or at peak periods such as rush hour.</p><br><br><p>With the easy to use HYGH platform, anyone can create a real-time campaign or generate passive income as a display provider. We’re democratizing advertising and disrupting how advertising is done.</p>",
+	"iso_times" : {
+		"ico" : [
+			ISODate("2019-06-07T00:00:00Z"),
+			ISODate("2019-12-07T00:00:00Z")
+		],
+		"preico" : [
+			ISODate("2019-01-07T00:00:00Z"),
+			ISODate("2019-06-07T00:00:00Z")
+		]
+	},
+	"team" : {
+		"team" : [
+			ObjectId("5d3edb1ae768af41f495b817"),
+			ObjectId("5d3edb1ae768af41f495b818"),
+			ObjectId("5d3edb1ae768af41f495b819"),
+			ObjectId("5d3edb1ae768af41f495b81a"),
+			ObjectId("5d3edb1ae768af41f495b81b"),
+			ObjectId("5d3edb1ae768af41f495b81c"),
+			ObjectId("5d3edb1ae768af41f495b81d"),
+			ObjectId("5d3edb1ae768af41f495b81e"),
+			ObjectId("5d3edb1ae768af41f495b81f"),
+			ObjectId("5d3edb1ae768af41f495b820"),
+			ObjectId("5d3edb1ae768af41f495b821"),
+			ObjectId("5d3edb1ae768af41f495b822"),
+			ObjectId("5d3edb1ae768af41f495b823"),
+			ObjectId("5d3edb1ae768af41f495b824"),
+			ObjectId("5d3edb1ae768af41f495b825"),
+			ObjectId("5d3edb1ae768af41f495b826"),
+			ObjectId("5d3edb1ae768af41f495b827"),
+			ObjectId("5d3edb1ae768af41f495b828")
+		],
+		"advisors" : [
+			ObjectId("5d3edb1ae768af41f495b829"),
+			ObjectId("5d3edb1ae768af41f495b82a"),
+			ObjectId("5d3edb1ae768af41f495b82b"),
+			ObjectId("5d3edb1ae768af41f495b82c"),
+			ObjectId("5d3edb1ae768af41f495b82d"),
+			ObjectId("5d3edb1ae768af41f495b82e"),
+			ObjectId("5d3edb1ae768af41f495b82f"),
+			ObjectId("5d3edb1ae768af41f495b830"),
+			ObjectId("5d3edb1ae768af41f495b831"),
+			ObjectId("5d3edb1ae768af41f495b832")
+		]
+	},
+	"whitepaper" : [
+		"https://hygh.tech/docs/HYGH-Paper.pdf"
+	],
+	"financial_data" : {
+		"Token" : "HYGH",
+		"Type" : "Security",
+		"PreICO Price" : "1 HYGH = 0.035 USD",
+		"Price" : "1 HYGH = 0.4 USD",
+		"Bonus" : "Available",
+		"Bounty" : "Available",
+		"MVP/Prototype" : "Available",
+		"Platform" : "Ethereum",
+		"Accepting" : "ETH, BTC, Fiat",
+		"Minimum investment" : "1000 USD",
+		"Hard cap" : "23,875,000 USD",
+		"Country" : "Switzerland",
+		"Whitelist/KYC" : "KYC & Whitelist"
+	}
+}
