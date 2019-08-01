@@ -5,6 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 from pymongo import MongoClient
+from ico_parser.spiders.icorating import IcoratingSpider
 
 CLIENT = MongoClient('localhost', 27017)
 MONGO_DB = CLIENT.ico
@@ -41,6 +42,17 @@ class IcoParserPipeline(object):
                 } for itm in item['advisors']
             ]
 
+        _ = self.project_collection.insert_one(item)
+
+        return item
+
+
+class IcoParserPipeline(object):
+    project_collection = MONGO_DB.icorating
+
+    # people_collection = MONGO_DB.people
+
+    def process_item(self, item, IcoratingSpider):
         _ = self.project_collection.insert_one(item)
 
         return item
