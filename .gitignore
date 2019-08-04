@@ -89,4 +89,4 @@ pip-selfcheck.json
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
 
-/data/*
+*.pdf
