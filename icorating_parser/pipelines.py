@@ -21,7 +21,7 @@ class IcoParserPipeline(object):
         self.db = self.client.icodb
         # очистить коллекции перед началом
         self.db.drop_collection(spider.name)
-        # self.db.drop_collection('persons')
+        self.db.drop_collection('persons')
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     def close_spider(self, spider):
