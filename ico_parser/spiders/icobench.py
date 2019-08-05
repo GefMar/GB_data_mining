@@ -3,6 +3,7 @@ import scrapy
 from ico_parser.items import IcoParserItem, PersonItem, RatingItem  # , IcoParserPeople
 from pymongo import MongoClient
 from time import sleep
+import re
 
 CLIENT = MongoClient('localhost', 27017)
 MONGO_DB = CLIENT.ico
@@ -83,6 +84,31 @@ class IcobenchSpider(scrapy.Spider):
             'vision_rating': vision_rating,
             'product_rating': product_rating,
         }]
+        try:
+            pre_ico_time_begin = response.css('div.fixed_data div.row small::text').re('\d\d\d\d -\d\d -\d\d')[0]
+        except IndexError as e:
+            pre_ico_time_begin = []
+        try:
+            pre_ico_time_end = response.css('div.fixed_data div.row small::text').re('\d\d\d\d-\d\d-\d\d')[1]
+        except IndexError as e:
+            pre_ico_time_end = []
+        try:
+            ico_time_begin = response.css('div.fixed_data div.row small::text').re('\d\d\d\d -\d\d -\d\d')[2]
+        except IndexError as e:
+            ico_time_begin = []
+        try:
+            ico_time_end = response.css('div.fixed_data div.row small::text').re('\d\d\d\d-\d\d-\d\d')[3]
+        except IndexError as e:
+            ico_time_end = []
+
+        row_data = response.xpath("//div[@class='financial_data']/div[@class='data_row']")
+        financial_data = {}
+
+        for item in row_data:
+            key = re.sub('[\\n]|[\\t]', '', item.xpath('descendant::div[1]/text()').get())
+
+            financial_data[key] = re.sub('[\\n]|[\\t]', '', item.xpath('descendant::div[2]/b//text()').get())
+
 
         data = {'name': response.css('div.ico_information div.name h1::text').get(),
                 'slogan': response.css('div.ico_information div.name h2::text').get(),
@@ -93,8 +119,11 @@ class IcobenchSpider(scrapy.Spider):
                 'about_project': response.css('div.frame div#about.tab_content p::text').getall(),
                 'team': team,
                 'advisors': advisors,
-                'pre_ico_time_begin': response.css('div.fixed_data div.row small::text').re('\d\d\d\d-\d\d-\d\d')[0],
-                'pre_ico_time_end': response.css('div.fixed_data div.row small::text').re('\d\d\d\d-\d\d-\d\d')[1],
+                'pre_ico_time_begin': pre_ico_time_begin,
+                'pre_ico_time_end': pre_ico_time_end,
+                'ico_time_begin': ico_time_begin,
+                'ico_time_end': ico_time_end,
+                'financial_data': financial_data,
                 }
 
         item = IcoParserItem(**data)

@@ -29,7 +29,9 @@ class IcoParserItem(scrapy.Item):
     advisors = scrapy.Field()
     pre_ico_time_begin = scrapy.Field()
     pre_ico_time_end = scrapy.Field()
-
+    ico_time_begin = scrapy.Field()
+    ico_time_end = scrapy.Field()
+    financial_data = scrapy.Field()
 
 class PersonItem(scrapy.Item):
     _id = scrapy.Field()
