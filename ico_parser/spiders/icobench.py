@@ -3,6 +3,7 @@ import scrapy
 from ico_parser.items import IcoParserItem
 from pymongo import MongoClient
 from time import sleep
+from ico_parser.items import PersonItem
 
 CLIENT = MongoClient('localhost', 27017)
 MONGO_DB = CLIENT.ico
@@ -54,9 +55,19 @@ class IcobenchSpider(scrapy.Spider):
                 'slogan': response.css('div.ico_information div.name h2::text').get(),
                 'description': response.css('div.ico_information p::text').get(),
                 'tags': response.css('div.ico_information div.categories a::text').extract(),
-                'rating': response.css('div.fixed_data div.rating div.rate::text').get(),
+                # 'rating': response.css('div.fixed_data div.rating div.rate::text').get(),
+                'rating': response.xpath('//div[@class ="rating"]/div[@itemprop="ratingValue"]/@content').getall(),
                 'whitepaper_url': response.css('div.content div.tab_content a::attr(href)').get,
                 'website': response.css('div.frame div.fixed_data div.financial_data a.button_big::attr(href)').get(),
+                'preico_time': response.css('div.frame div.fixed_data div.financial_data div.number::text').get(),
+                'type': response.css('div.frame div.fixed_data div.financial_data a::text').get(),
+                'twiter_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.twitter::attr(href)').get(),
+                'facebook_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.facebook::attr(href)').get(),
+                'reddit_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.reddit::attr(href)').get(),
+                'bitcointalk_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.bitcointalk::attr(href)').get(),
+                'medium_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.medium::attr(href)').get(),
+                'telegram_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.telegram::attr(href)').get(),
+                'bitcoinwiki_url': response.css('div#page div#profile_header div.frame div.fixed_data div.socials a.bitcoinwiki::attr(href)').get(),
                 'team': team,
                 'advisors': advisors,
                 }
