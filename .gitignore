@@ -83,3 +83,16 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+/.idea/
+/icobench/
+/icorating/
+/venv/
+*.db
+*.zip
+/login_data.py
+/test_kudaibergenov.session
+*.log
+
+*.session-journal
+/hh_spyder-develop/
+/Telephonic.py
