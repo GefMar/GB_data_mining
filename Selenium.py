@@ -4,7 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from hh_login import hh_login, hh_pwd
+from login_data import hh_login, hh_pwd
 from time import sleep
 from w3lib.html import remove_tags
 from pymongo import MongoClient

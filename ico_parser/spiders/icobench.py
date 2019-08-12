@@ -109,7 +109,6 @@ class IcobenchSpider(scrapy.Spider):
 
             financial_data[key] = re.sub('[\\n]|[\\t]', '', item.xpath('descendant::div[2]/b//text()').get())
 
-
         data = {'name': response.css('div.ico_information div.name h1::text').get(),
                 'slogan': response.css('div.ico_information div.name h2::text').get(),
                 'description': response.css('div.ico_information p::text').get(),
@@ -124,6 +123,7 @@ class IcobenchSpider(scrapy.Spider):
                 'ico_time_begin': ico_time_begin,
                 'ico_time_end': ico_time_end,
                 'financial_data': financial_data,
+                'socials': response.css('div.fixed_data div.socials a::attr(href)').getall(),
                 }
 
         item = IcoParserItem(**data)

@@ -32,6 +32,7 @@ class IcoParserItem(scrapy.Item):
     ico_time_begin = scrapy.Field()
     ico_time_end = scrapy.Field()
     financial_data = scrapy.Field()
+    socials = scrapy.Field()
 
 class PersonItem(scrapy.Item):
     _id = scrapy.Field()

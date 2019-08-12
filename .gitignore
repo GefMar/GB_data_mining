@@ -89,4 +89,10 @@ pip-selfcheck.json
 /venv/
 *.db
 *.zip
-/hh_login.py
+/login_data.py
+/test_kudaibergenov.session
+*.log
+
+*.session-journal
+/hh_spyder-develop/
+/Telephonic.py
