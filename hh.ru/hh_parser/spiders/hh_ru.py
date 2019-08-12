@@ -11,13 +11,16 @@ class HhRuSpider(scrapy.Spider):
     name = 'hh.ru'
     allowed_domains = ['hh.ru']
 
+    def __init__(self):
+        self.browser = webdriver.Chrome()
+
     def page_parse(self, response):
-        browser = webdriver.Chrome()
+        # browser = webdriver.Chrome()
         link = 'https://hh.ru' + response.meta.get('resume_link')
-        browser.get(link)
+        self.browser.get(link)
         time.sleep(1)
-        last_company = browser.find_element_by_xpath('//div[@class="resume-block__sub-title"]/span').text
-        get_skills = browser.find_elements_by_xpath('//div[@class="bloko-tag-list"]//span[@data-qa="bloko-tag__text"]/span')
+        last_company = self.browser.find_element_by_xpath('//div[@class="resume-block__sub-title"]/span').text
+        get_skills = self.browser.find_elements_by_xpath('//div[@class="bloko-tag-list"]//span[@data-qa="bloko-tag__text"]/span')
         skills = []
         for itm in get_skills:
             skills.append(itm.text)
@@ -26,7 +29,7 @@ class HhRuSpider(scrapy.Spider):
             'skills': skills,
             'resume_link': link,
         }
-        browser.close()
+        self.browser.close()
 
         item = HhParserItem(**data)
 
