@@ -21,5 +21,12 @@ class HhruSpider(scrapy.Spider):
 
     def vacansy_parse(self, response: HtmlResponse):
         name = response.css('div.vacancy-title h1.header::text').extract_first()
-        salary = response.css('div.vacancy-title p.vacancy-salary::text').extract_first()
+
+        salary = {'currency': response.xpath(
+            '//span[@itemprop="baseSalary"]//meta[contains(@itemprop, "currency")]/@content').extract_first(),
+                  'min_value': response.xpath(
+                      '//span[@itemprop="baseSalary"]/span[@itemprop="value"]/meta[@itemprop="minValue"]/@content').extract_first(),
+                  'max_value': response.xpath(
+                      '//span[@itemprop="baseSalary"]/span[@itemprop="value"]/meta[@itemprop="maxValue"]/@content').extract_first()}
+
         yield JobparserItem(name=name, salary=salary)
