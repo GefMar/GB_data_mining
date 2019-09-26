@@ -7,6 +7,8 @@
 from pymongo import MongoClient
 from database.base import VacancyDB
 from database.models import Vacancy
+import scrapy
+from scrapy.pipelines.images import ImagesPipeline
 
 
 class JobparserPipeline(object):
@@ -18,6 +20,21 @@ class JobparserPipeline(object):
     def process_item(self, item, spider):
         collection = self.mongo_base[spider.name]
         collection.insert_one(item)
-        db_item = Vacancy(name=item.get('name'), spider=spider.name, salary=item.get('salary'))
-        self.sql_db.add_salary(db_item)
+        # db_item = Vacancy(name=item.get('name'), spider=spider.name, salary=item.get('salary'))
+        # self.sql_db.add_salary(db_item)
+        return item
+
+
+class AvitoPhotosPipelines(ImagesPipeline):
+    def get_media_requests(self, item, info):
+        if item['photos']:
+            for img in item['photos']:
+                try:
+                    yield scrapy.Request(img)
+                except TypeError:
+                    pass
+
+    def item_completed(self, results, item, info):
+        if results:
+            item['photos'] = [itm[1] for itm in results if itm[0]]
         return item

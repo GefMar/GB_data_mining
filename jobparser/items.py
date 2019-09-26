@@ -6,6 +6,19 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader.processors import MapCompose, TakeFirst
+
+
+def cleaner_photo(values):
+    if values[:2] == '//':
+        return f'http:{values}'
+    return values
+
+
+class AvitoRealEstate(scrapy.Item):
+    _id = scrapy.Field()
+    title = scrapy.Field(output_processor=TakeFirst())
+    photos = scrapy.Field(input_processor=MapCompose(cleaner_photo))
 
 
 class JobparserItem(scrapy.Item):
