@@ -23,7 +23,7 @@ if __name__ == '__main__':
     crawler_settings.setmodule(settings)
     process = CrawlerProcess(settings=crawler_settings)
     # process.crawl(HhruSpider)
-    process.crawl(AvitoSpider)
+    process.crawl(ZillowSpider)
     # process.crawl(SuperjobSpider)
     # process.crawl(InstagramSpider, ['geekbrains', 'harleydavidson'], INST_LOGIN, INST_PWD)
     process.start()

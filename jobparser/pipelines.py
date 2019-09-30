@@ -27,11 +27,12 @@ class JobparserPipeline(object):
 
 class AvitoPhotosPipelines(ImagesPipeline):
     def get_media_requests(self, item, info):
+        pass
         if item['photos']:
             for img in item['photos']:
                 try:
                     yield scrapy.Request(img)
-                except TypeError:
+                except Exception as e:
                     pass
 
     def item_completed(self, results, item, info):
