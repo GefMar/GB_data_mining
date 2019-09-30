@@ -20,10 +20,10 @@ class ZillowSpider(scrapy.Spider):
         yield response.follow(next, callback=self.parse)
 
         for adv in real_estate_list.extract():
-            yield self.pars_adv(adv)
+            yield response.follow(adv, callback=self.pars_adv)
 
-    def pars_adv(self, link):
-        self.webdriver.get(link)
+    def pars_adv(self, response: HtmlResponse):
+        self.webdriver.get(response.url)
         media = self.webdriver.find_element_by_css_selector('.ds-media-col')
         photo_pic_img_len = len(self.webdriver.find_elements_by_xpath(
             '//ul[@class="media-stream"]/li/picture/source[@type="image/jpeg"]'))
@@ -45,4 +45,4 @@ class ZillowSpider(scrapy.Spider):
                       '//ul[@class="media-stream"]/li/picture/source[@type="image/jpeg"]')
                   ]
 
-        return AvitoRealEstate(title=self.webdriver.title, photos=images)
+        yield AvitoRealEstate(title=self.webdriver.title, photos=images)
